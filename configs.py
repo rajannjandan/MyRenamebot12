@@ -18,6 +18,7 @@ class Config(object):
     DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./downloads")
     LOGGER = logging
     OWNER_ID = int(os.environ.get("OWNER_ID", 1364321375)
+    PRO_USERS = OWNER_ID
     MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://AmRenamebot:AmRenamebot@cluster0.qjhucea.mongodb.net/?retryWrites=true&w=majority")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001583149598"))
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
