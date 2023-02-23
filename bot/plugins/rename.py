@@ -36,7 +36,6 @@ async def rename_handler(c: Client, m: Message):
                                "No Flooding Allowed!\n\n"
                                f"Send After `{str(sleep_time)}s` !!",
                                quote=True)
-            return
     await add_user_to_database(c, m)
     if (not m.reply_to_message) or (not m.reply_to_message.media) or (not get_file_attr(m.reply_to_message)):
         return await m.reply_text("Reply to any document/video/audio to rename it!", quote=True)
