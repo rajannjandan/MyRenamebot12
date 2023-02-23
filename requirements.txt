@@ -9,4 +9,3 @@ hachoir
 mutagen
 psutil
 aiofiles
-
