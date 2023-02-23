@@ -9,4 +9,4 @@ hachoir
 mutagen
 psutil
 aiofiles
-pyromod==1.5
+
