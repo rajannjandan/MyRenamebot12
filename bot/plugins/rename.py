@@ -26,7 +26,7 @@ from bot.core.handlers.big_rename import handle_big_rename
 
 
 @Client.on_callback_query(filters.regex('rename'))
-async def rename_handler(client, message):
+async def rename_handler(c: Client, m: Message):
     # Checks
     if not m.from_user:
         return await m.reply_text("I don't know about you sar :(")
