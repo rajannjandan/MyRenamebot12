@@ -25,7 +25,7 @@ from bot.core.handlers.time_gap import check_time_gap
 from bot.core.handlers.big_rename import handle_big_rename
 
 
-@Client.on_callback_query(filters.regex('rename'))
+@Client.on_callback_query(filters.create('rename'))
 async def rename_handler(c: Client, cb: "types.CallbackQuery"):
     # Checks
     if not m.from_user:
