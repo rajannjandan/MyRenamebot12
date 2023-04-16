@@ -25,8 +25,8 @@ from bot.core.handlers.time_gap import check_time_gap
 from bot.core.handlers.big_rename import handle_big_rename
 
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename")))
-async def rename_handler(c: Client, m: Message):
+@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename_handler")))
+async def handle_big_rename(c: Client, m: Message):
     # Checks
     if m.data == "rename_file":
         return await m.reply_text("I don't know about you sar :(")
