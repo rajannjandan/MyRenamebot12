@@ -25,9 +25,9 @@ from bot.core.handlers.time_gap import check_time_gap
 from bot.core.handlers.big_rename import handle_big_rename
 
 
-@Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("rename_handler")))
-async def handle_big_rename(c: Client, m: Message):
-    # Checks
+@Client.on_callback_query(filters.create('rename')
+async def rename_handler(c: Client, m: Message):
+
     if m.data == "rename_file":
         return await m.reply_text("I don't know about you sar :(")
         is_in_gap, sleep_time = await check_time_gap(m.from_user.id)
