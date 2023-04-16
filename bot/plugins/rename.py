@@ -16,7 +16,7 @@ from bot.core.file_info import (
     get_file_type,
     get_file_attr
 )
-from configs import Config
+from configs import Confg
 from bot.core.display import progress_for_pyrogram
 from bot.core.db.database import db
 from bot.core.db.add import add_user_to_database
@@ -25,10 +25,10 @@ from bot.core.handlers.time_gap import check_time_gap
 from bot.core.handlers.big_rename import handle_big_rename
 
 
-@Client.on_callback_query(filters.create('rename')
+@Client.on_callback_query(filters.regex('rename'))
 async def rename_handler(c: Client, m: Message):
 
-    if m.data == "rename_file":
+    elif m.data == "rename_file":
         return await m.reply_text("I don't know about you sar :(")
         is_in_gap, sleep_time = await check_time_gap(m.from_user.id)
         if is_in_gap:
