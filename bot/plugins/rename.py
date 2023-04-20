@@ -28,7 +28,7 @@ from bot.core.handlers.big_rename import handle_big_rename
 @Client.on_callback_query(filters.regex('rename'))
 async def rename_handler(c: Client, m: Message):
 
-    elif m.data == "rename_file":
+    if m.data == "rename_file":
         return await m.reply_text("I don't know about you sar :(")
         is_in_gap, sleep_time = await check_time_gap(m.from_user.id)
         if is_in_gap:
