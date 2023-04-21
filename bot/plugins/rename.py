@@ -16,7 +16,7 @@ from bot.core.file_info import (
     get_file_type,
     get_file_attr
 )
-from configs import Confg
+from configs import Config
 from bot.core.display import progress_for_pyrogram
 from bot.core.db.database import db
 from bot.core.db.add import add_user_to_database
