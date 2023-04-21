@@ -20,7 +20,7 @@ async def on_media_handler(c: Client, m: "types.Message"):
         chat_id=m.chat.id,
         text="**Should I show File Information?**",
         reply_markup=types.InlineKeyboardMarkup(
-            [[types.InlineKeyboardButton("Rename ✏️", callback_data="rename_file")],
+            [[types.InlineKeyboardButton("Rename ✏️", callback_data="rename")],
              [types.InlineKeyboardButton("INFO ✨", callback_data="showFileInfo")],
              [types.InlineKeyboardButton("Cancel ❌", callback_data="closeMessage")]]
         ),
